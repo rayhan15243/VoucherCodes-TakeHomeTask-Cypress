@@ -10,7 +10,8 @@ Prerequisites:
 
 How to setup the repo:
 1. In VSCODE terminal do git clone https://github.com/rayhan15243/cypressTakeHomeTest.git
-2. In VSCODE terminal, do npm install - this will install the required dependencies to be able to use     Cypress locally in your machine. 
+2. In VSCODE terminal, do npm install - this will install the 
+   required dependencies to be able to use Cypress locally in your machine. 
 
 
 
