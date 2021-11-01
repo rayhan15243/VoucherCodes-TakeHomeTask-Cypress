@@ -1,6 +1,10 @@
 # cypressTakeHomeTest
 Test Engineer II - Take Home Task
 
+The reason why I chose to use Cypress for this task is because Cypress requires minimal setup
+and has brilliant documentation, probably the best I found for an automated testing tool. Also the GUI
+feature is brilliant as you can observe results and the execution visually at the same time. 
+
 Prerequisites:
 
 1. Node (e.g. v12.19.0)
