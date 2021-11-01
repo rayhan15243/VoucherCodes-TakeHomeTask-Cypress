@@ -21,19 +21,12 @@ describe("VoucherCodes Test Engineer Task", function(){
         .click()
   })
 
-  it('Find "ASOS" & "Apple" in Trending dropdown ', function() {
-    
+  it('Find "ASOS" & "Apple" in Trending dropdown', function() { 
     cy.get('[data-qa="el:trendingHeader"]')
     .contains('Trending')
     .click()
     cy.get('.duration-2000')
     .contains('ASOS')
     .contains('Apple')
-    
-
 })
-
-
-
-
 })
