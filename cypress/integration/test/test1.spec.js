@@ -1,7 +1,10 @@
 describe("VoucherCodes Test Engineer Task", function(){
 
+    // A test that passes.
     it('Search for offers in London', function() {
+        // baseUrl, see cypress.json for the full URL.
         cy.visit("/")
+        // Asserts current url.
         cy.url().should('eq', 'https://www.vouchercodes.co.uk/')
         cy.get('[data-ga-action="Restaurant"]')
         .contains('Food')
@@ -21,6 +24,7 @@ describe("VoucherCodes Test Engineer Task", function(){
         .click()
   })
 
+  // A test that fails. 
   it('Find "ASOS" & "Apple" in Trending dropdown', function() { 
     cy.get('[data-qa="el:trendingHeader"]')
     .contains('Trending')
