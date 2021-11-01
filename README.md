@@ -9,20 +9,21 @@ Prerequisites:
 
 
 How to setup the repo:
-1. In VSCODE terminal do git clone https://github.com/rayhan15243/cypressTakeHomeTest.git
-2. In VSCODE terminal, do npm install - this will install the 
-   required dependencies to be able to use Cypress locally in your machine. 
+1. In VSCODE terminal, and type into the terminal: 
+   git clone https://github.com/rayhan15243/cypressTakeHomeTest.git
+2. In VSCODE terminal, type into the terminal: npm install 
+   - this will install the required dependencies to be able to run Cypress locally in your machine. 
 
 
 
 To run a test in the terminal and view results:
-1. Do npx cypress run (This will execute the tests using the default browser (Electron)
+1. Type into the terminal: npx cypress run (This will execute the tests using the default browser (Electron)
 2. Results will show in the terminal. For any failed tests screenshots and a video recording is generated.
    They can be accessed via the folders cypressTakeHomeTest/cypress/screenshots 
    and cypressTakeHomeTest/cypress/videos
 
 
 To run a test via the Cypress GUI:
-1. Do npx cypress open
+1. Type into the terminal: npx cypress open
 2. Choose which browser to execute the tests in (e.g. if you have Chrome installed 
     in your machine the GUI will make it available as an option to execute the tests)
