@@ -1,7 +1,12 @@
 describe("VoucherCodes Test Engineer Task", function(){
 
     it('Search for offers in Kentish Town', function() {
-        cy.visit("https://www.vouchercodes.co.uk/restaurant-vouchers.html")
+        cy.visit("https://www.vouchercodes.co.uk/")
+        cy.url().should('eq', 'https://www.vouchercodes.co.uk/')
+        cy.get('[data-ga-action="Restaurant"]')
+        .contains('Food')
+        .click()
+        cy.url().should('eq', 'https://www.vouchercodes.co.uk/restaurant-vouchers.html')
         cy.get('[placeholder="Town or postcode"]')
         .type('Kentish Town')
         .should('have.value', 'Kentish Town')
@@ -16,14 +21,14 @@ describe("VoucherCodes Test Engineer Task", function(){
         .click()
   })
 
-  it('Assert offers search query', function() {
+  it('Assert search query in "Start searching" search bar ', function() {
     
-    cy.get('[placeholder="Town or postcode"]')
-    .should('have.value', 'Kentish Town')
-    cy.get('[data-qa="el:dayDropdown"]', { force: true })
-    .contains('Today')
-    cy.get('[name="people-select"]')
-    .contains('5')
+    cy.get('[placeholder="Start searching"]')
+    .type('Nandos')
+    .should('have.value', 'Nandoes')
+    .type('{enter}')
+    
+
 })
 
 
