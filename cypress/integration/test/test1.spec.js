@@ -1,6 +1,6 @@
 describe("VoucherCodes Test Engineer Task", function(){
 
-    it('Search for offers in Kentish Town', function() {
+    it('Search for offers in London', function() {
         cy.visit("https://www.vouchercodes.co.uk/")
         cy.url().should('eq', 'https://www.vouchercodes.co.uk/')
         cy.get('[data-ga-action="Restaurant"]')
@@ -8,8 +8,8 @@ describe("VoucherCodes Test Engineer Task", function(){
         .click()
         cy.url().should('eq', 'https://www.vouchercodes.co.uk/restaurant-vouchers.html')
         cy.get('[placeholder="Town or postcode"]')
-        .type('Kentish Town')
-        .should('have.value', 'Kentish Town')
+        .type('London')
+        .should('have.value', 'London')
         cy.get('[name="day-select"]')
         .select('Today')
         .contains('Today')
@@ -21,12 +21,14 @@ describe("VoucherCodes Test Engineer Task", function(){
         .click()
   })
 
-  it('Assert search query in "Start searching" search bar ', function() {
+  it('Find "ASOS" & "Apple" in Trending dropdown ', function() {
     
-    cy.get('[placeholder="Start searching"]')
-    .type('Nandos')
-    .should('have.value', 'Nandoes')
-    .type('{enter}')
+    cy.get('[data-qa="el:trendingHeader"]')
+    .contains('Trending')
+    .click()
+    cy.get('.duration-2000')
+    .contains('ASOS')
+    .contains('Apple')
     
 
 })
