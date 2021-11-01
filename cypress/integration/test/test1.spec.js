@@ -1,7 +1,7 @@
 describe("VoucherCodes Test Engineer Task", function(){
 
     it('Search for offers in London', function() {
-        cy.visit("https://www.vouchercodes.co.uk/")
+        cy.visit("/")
         cy.url().should('eq', 'https://www.vouchercodes.co.uk/')
         cy.get('[data-ga-action="Restaurant"]')
         .contains('Food')
