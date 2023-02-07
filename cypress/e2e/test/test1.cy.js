@@ -7,8 +7,8 @@ describe("VoucherCodes Test Engineer Task", function(){
         // Asserts current url.
         cy.url().should('eq', 'https://www.vouchercodes.co.uk/')
         // Asserts link
-        cy.get('[data-ga-action="Restaurant"]')
-        .contains('Food')
+        cy.get('[data-qa="el:restaurantVouchersLink"]')
+        .contains('View all Restaurants')
         .click()
         // Asserts current url after clicking the 'Food' link
         cy.url().should('eq', 'https://www.vouchercodes.co.uk/restaurant-vouchers.html')
@@ -17,12 +17,12 @@ describe("VoucherCodes Test Engineer Task", function(){
         .type('London')
         // Asserts textbox to enter Location
         .should('have.value', 'London')
-        cy.get('[name="day-select"]')
+        cy.get('#day-select')
           // Select Day
         .select('Today')
         // Asserts the day selected
         .contains('Today')
-        cy.get('[name="people-select"]')
+        cy.get('#people-select')
          // Select number of people
         .select('5')
         // Asserts the number of people selected
@@ -34,16 +34,17 @@ describe("VoucherCodes Test Engineer Task", function(){
   })
 
   // A test that fails. 
-  it('Find "ASOS" & "Apple" in Trending dropdown', function() { 
+  it('Find "ASOS" & "Samsung" in Trending dropdown', function() { 
     
     // Trending dropdown
-    cy.get('[data-qa="el:trendingHeader"]')
+    cy.get('#trending-dialog')
     .contains('Trending')
     .click()
-    cy.get('.duration-2000')
+    cy.get('[data-qa="el:trendingMerchant"]')
     // Find 'ASOS'
     .contains('ASOS')
-    // Find 'Apple'
-    .contains('Apple')
+    // Find 'Samsung'
+    .contains('Samsung')
+    console.log()
 })
 })
