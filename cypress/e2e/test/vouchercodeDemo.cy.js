@@ -6,7 +6,7 @@ const offers = new Offers()
 
 
 
-describe("VoucherCodes Test Engineer Task", function(){
+describe("VoucherCodes Test Engineer Task Demo", function(){
 
     // A test that passes.
     it('Search for offers in London', function() {
