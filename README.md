@@ -34,7 +34,6 @@ To run a test in headless mode and view results:
    
    ```
    npx cypress run 
-
    ```
    This will execute the tests using the default browser (Electron)
 
@@ -49,7 +48,6 @@ To run a test via the Cypress Launchpad:
    
    ```
    npx cypress open
-
    ```
 2. Choose which browser to execute the test in (e.g. if you have Chrome installed 
    in your machine the browser will displayed in the Launchpad as an option to execute the tests)
